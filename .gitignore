@@ -1,0 +1,24 @@
+# Dependency directories
+vendor/
+composer.lock
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+logs/
+
+# Runtime data
+cache/
+sessions/
+
+# Configuration files
+app/config.php
+
+# IDE
+.idea/
+.vscode/
+*.swp
