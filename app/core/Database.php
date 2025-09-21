@@ -7,13 +7,24 @@ class Database
     private $password = DB_PASS;
     public $conn;
 
-    public function getConnection()
-    {
+    public function getConnection() {
         $this->conn = null;
         try {
-            $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
-            $this->conn->exec("set names utf8");
-        } catch (PDOException $exception) {
+            $this->conn = new PDO(
+                "mysql:host=" . $this->host .
+                ";dbname=" . $this->db_name .
+                ";charset=utf8mb4",
+                $this->username,
+                $this->password
+            );
+
+            // УСТАНАВЛИВАЕМ ПРАВИЛЬНУЮ ТИМЗОНУ ДЛЯ MySQL
+            $this->conn->exec("SET time_zone = '+03:00';"); // Для Москвы
+            // Или для других регионов:
+            // $this->conn->exec("SET time_zone = '+04:00';"); // Для Самары, Баку
+            // $this->conn->exec("SET time_zone = '+05:00';"); // Для Екатеринбурга, Алматы
+
+        } catch(PDOException $exception) {
             echo "Connection error: " . $exception->getMessage();
         }
         return $this->conn;

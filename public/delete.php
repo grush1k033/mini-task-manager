@@ -262,7 +262,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
 
             <form method="POST">
-                <button type="submit" name="confirm_delete" class="btn-danger">
+                <button type="submit" name="delete" class="btn-danger">
                     <i class="bi bi-trash-fill me-2"></i> Да, удалить товар
                 </button>
                 <a href="index.php" class="btn btn-outline-secondary">
