@@ -16,7 +16,7 @@ cache/
 sessions/
 
 # Configuration files
-app/config/database.phpphp
+app/config/database.php
 
 # IDE
 .idea/
