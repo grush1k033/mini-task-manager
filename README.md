@@ -23,6 +23,9 @@
 ```bash
 git clone https://github.com/grush1k033/task-manager.git
 
-🌐 Демо
+```
+## 🌐 Демо
+
 Посмотреть работающее приложение можно по адресу:
+
 http://grush1k-host.infinityfree.me/public
